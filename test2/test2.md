@@ -51,7 +51,7 @@
 
 2. **name**:
 
-* **类型****:** `text`
+* **类型**: `text`
 * **描述**: 用户的姓名。使用标准分析器处理以支持全文搜索。
 
 3. **email**:
@@ -59,7 +59,7 @@
 * **类型**: `keyword`
 * **描述**: 用户的电子邮件地址。作为关键词存储以确保精确匹配，便于查找。
 
-4. **date\_of\_birth****:**
+4. **date\_of\_birth**:
 
 * **类型**: `date`
 * **描述**: 用户的出生日期，格式为日期类型，便于进行年龄计算和范围查询。
@@ -91,12 +91,12 @@
 
 10. **status**:
 
-* **类型**:<span class="ne-text">  `keyword`
+* **类型**: `keyword`
 * **描述**: 用户账户的当前状态（如“active”、“inactive”），用于筛选和状态管理。
 
 代码如下：
 
-1.创建索引user_information
+1.创建索引`user_information`
 
 ```
 PUT /user_information
@@ -264,7 +264,7 @@ PUT /user_information/_mapping
 * **类型**: `keyword`
 * **描述**: 产品所属的类别，用于分类和过滤产品。
 
-5. **price****:**
+5. **price**:
 
 * **类型**: `double`
 * **描述**: 产品的价格，以浮点数表示，便于进行价格范围查询和排序。
@@ -274,7 +274,7 @@ PUT /user_information/_mapping
 * **类型**:`integer`
 * **描述**: 产品的库存数量，以整数表示，用于库存管理和查询。
 
-7. **supplier****:**
+7. **supplier**:
 
 * **类型**:`keyword`
 * **描述**: 产品的供应商信息，通常是供应商的名称或ID，用于追踪和管理供应链。
@@ -289,14 +289,14 @@ PUT /user_information/_mapping
 * **类型**: `keyword`
 * **描述**: 与产品相关的标签，用于搜索和过滤产品。
 
-10. **rating****:**
+10. **rating**:
 
 * **类型**:`float`
 * **描述**: 产品的平均评分，以浮点数表示，用于排序和筛选高评分产品。
 
 代码如下：
 
-1.创建索引product_catalog
+1.创建索引`product_catalog`
 
 ```
 PUT /product_catalog
@@ -673,7 +673,7 @@ PUT /order_records/_mapping
 
 1.创建文档
 
-在user_information 索引下创建文档
+在`user_information` 索引下创建文档
 
 代码如下：
 
@@ -699,7 +699,7 @@ POST /user_information/_doc/1
 
 2.修改文档
 
-修改user_information下创建的文档内容
+修改`user_information`下创建的文档内容
 
 代码如下：
 
@@ -1116,7 +1116,7 @@ POST /user_information/_bulk
 
 1.创建文档
 
-在product_catalog索引下创建文档
+在`product_catalog`索引下创建文档
 
 代码如下：
 
@@ -1142,7 +1142,7 @@ POST /product_catalog/_doc/1
 
 2.修改文档
 
-修改product_catalog下创建的文档内容
+修改`product_catalog`下创建的文档内容
 
 代码如下:
 
@@ -1559,7 +1559,7 @@ POST /product_catalog/_bulk
 
 1.创建文档
 
-在order_records索引下创建文档
+在`order_records`索引下创建文档
 
 代码如下：
 
@@ -1591,7 +1591,7 @@ POST /order_records/_doc/1
 
 2.修改文档
 
-修改order_records下创建的文档内容
+修改`order_records`下创建的文档内容
 
 代码如下:
 
