@@ -287,9 +287,9 @@ GET /ecommerce/_search
   "aggs": {
     "top_products": {
       "terms": {
-        "field": "product_id",
+        "field": "product_name",
         "size": 5,
-        "order":{
+        "order": {
           "total_quantity": "desc"
         }
       },
@@ -309,7 +309,7 @@ GET /ecommerce/_search
 
 ```
 {
-  "took": 20,
+  "took": 0,
   "timed_out": false,
   "_shards": {
     "total": 1,
@@ -328,41 +328,41 @@ GET /ecommerce/_search
   "aggregations": {
     "top_products": {
       "doc_count_error_upper_bound": -1,
-      "sum_other_doc_count": 84,
+      "sum_other_doc_count": 67,
       "buckets": [
         {
-          "key": "P031",
-          "doc_count": 4,
+          "key": "Elite Accessory",
+          "doc_count": 6,
           "total_quantity": {
-            "value": 13
+            "value": 25
           }
         },
         {
-          "key": "P005",
-          "doc_count": 3,
+          "key": "Ultra Device",
+          "doc_count": 7,
           "total_quantity": {
-            "value": 11
+            "value": 24
           }
         },
         {
-          "key": "P021",
-          "doc_count": 3,
+          "key": "Ultra Accessory",
+          "doc_count": 8,
           "total_quantity": {
-            "value": 11
+            "value": 22
           }
         },
         {
-          "key": "P076",
-          "doc_count": 3,
+          "key": "Ultra Gadget",
+          "doc_count": 6,
           "total_quantity": {
-            "value": 11
+            "value": 21
           }
         },
         {
-          "key": "P099",
-          "doc_count": 3,
+          "key": "Ultra Tool",
+          "doc_count": 6,
           "total_quantity": {
-            "value": 11
+            "value": 21
           }
         }
       ]
